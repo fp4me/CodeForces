@@ -4,9 +4,9 @@ import System.IO
 main :: IO ()
 main = do
   z <- getLine
-  if (funcky (read $ z :: Double))
-    then putStrLn "YES"
-    else putStrLn "NO"
+  case (funcky (read $ z :: Double)) of
+    True -> putStrLn "YES"
+    False -> putStrLn "NO"
 
 funcky:: Double -> Bool
 funcky n = func bInf bSup
